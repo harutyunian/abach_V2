@@ -8,6 +8,6 @@ export const heroImageUrl: string =
 
 export const mobileImageUrl: string =
   (import.meta as any).env?.VITE_MOBILE_IMAGE_URL ||
-  new URL('../assets/mobile-barbershop.jpg', import.meta.url).href;
+  'https://static.wixstatic.com/media/c31dbd_e52405e685a54c739b6ee6496e29f1bb~mv2.jpg/v1/fill/w_610,h_268,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/103339608_2383247221971155_5084900471404.jpg';
 
 
