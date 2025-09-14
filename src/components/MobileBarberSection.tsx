@@ -28,7 +28,7 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
               </p>
               
               <p className="text-lg text-foreground font-medium">
-                Обеспечение высокого профессионального качества обслуживания и максимального удобства для клиентов.
+                {t('mobile.quality_statement')}
               </p>
             </div>
 
@@ -39,8 +39,8 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
                   <MapPin className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">We Come to You</h3>
-                  <p className="text-sm text-muted-foreground">Professional services at your location</p>
+                  <h3 className="font-semibold text-foreground mb-1">{t('mobile.feature1.title')}</h3>
+                  <p className="text-sm text-muted-foreground">{t('mobile.feature1.desc')}</p>
                 </div>
               </div>
               
@@ -49,8 +49,8 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
                   <Clock className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Flexible Hours</h3>
-                  <p className="text-sm text-muted-foreground">Available when you need us</p>
+                  <h3 className="font-semibold text-foreground mb-1">{t('mobile.feature2.title')}</h3>
+                  <p className="text-sm text-muted-foreground">{t('mobile.feature2.desc')}</p>
                 </div>
               </div>
               
@@ -59,8 +59,8 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
                   <Shield className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Premium Equipment</h3>
-                  <p className="text-sm text-muted-foreground">Professional tools and products</p>
+                  <h3 className="font-semibold text-foreground mb-1">{t('mobile.feature3.title')}</h3>
+                  <p className="text-sm text-muted-foreground">{t('mobile.feature3.desc')}</p>
                 </div>
               </div>
               
@@ -69,15 +69,15 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
                   <Award className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-foreground mb-1">Expert Service</h3>
-                  <p className="text-sm text-muted-foreground">Skilled professional barbers</p>
+                  <h3 className="font-semibold text-foreground mb-1">{t('mobile.feature4.title')}</h3>
+                  <p className="text-sm text-muted-foreground">{t('mobile.feature4.desc')}</p>
                 </div>
               </div>
             </div>
 
             {/* Contact Info */}
             <div className="card-gradient rounded-xl p-6 border border-border/50">
-              <h3 className="font-semibold text-foreground mb-4">Ready to Experience Mobile Barbering?</h3>
+              <h3 className="font-semibold text-foreground mb-4">{t('mobile.cta_title')}</h3>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   variant="hero" 
@@ -91,11 +91,11 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
                   size="lg"
                   onClick={() => window.open('tel:+37498157773', '_self')}
                 >
-                  Call: {t('mobile.phone')}
+                  {t('call')}: {t('mobile.phone')}
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground mt-3">
-                Желающие воспользоваться нашими услугами, могут позвонить и машина приедет в желаемое Вами место.
+                {t('mobile.cta_note')}
               </p>
             </div>
           </div>
@@ -114,9 +114,9 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
             {/* Floating Badge */}
             <div className="absolute -bottom-6 -left-6 card-gradient rounded-xl p-4 border border-border/50 elegant-shadow">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gradient">#1</div>
-                <div className="text-sm text-muted-foreground">Mobile Barbershop</div>
-                <div className="text-xs text-muted-foreground">in Armenia</div>
+                <div className="text-2xl font-bold text-gradient">{t('mobile.banner.rank')}</div>
+                <div className="text-sm text-muted-foreground">{t('mobile.banner.title')}</div>
+                <div className="text-xs text-muted-foreground">{t('mobile.banner.subtitle')}</div>
               </div>
             </div>
           </div>

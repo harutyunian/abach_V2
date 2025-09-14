@@ -35,7 +35,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookingClick }) => {
               ))}
             </div>
             <span className="text-muted-foreground">
-              Premium Barbershop Experience
+              {t('hero.experience')}
             </span>
           </div>
 
@@ -54,7 +54,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookingClick }) => {
             {t('hero.description')}
             <br />
             <span className="text-primary font-medium">
-              Барбершоп Каро Абачян предоставляет наилучшее обслуживание для каждого клиента
+              {t('hero.promo')}
             </span>
           </p>
 
@@ -82,23 +82,23 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookingClick }) => {
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="card-gradient rounded-lg p-6 hover-lift border border-border/50">
-              <h3 className="font-semibold text-foreground mb-2">Premium Quality</h3>
+              <h3 className="font-semibold text-foreground mb-2">{t('features.quality.title')}</h3>
               <p className="text-muted-foreground text-sm">
-                Professional equipment and premium products for the finest grooming experience
+                {t('features.quality.desc')}
               </p>
             </div>
             
             <div className="card-gradient rounded-lg p-6 hover-lift border border-border/50">
-              <h3 className="font-semibold text-foreground mb-2">Mobile Service</h3>
+              <h3 className="font-semibold text-foreground mb-2">{t('features.mobile.title')}</h3>
               <p className="text-muted-foreground text-sm">
-                Armenia's first mobile barbershop - we come to you
+                {t('features.mobile.desc')}
               </p>
             </div>
             
             <div className="card-gradient rounded-lg p-6 hover-lift border border-border/50">
-              <h3 className="font-semibold text-foreground mb-2">Expert Barbers</h3>
+              <h3 className="font-semibold text-foreground mb-2">{t('features.expert.title')}</h3>
               <p className="text-muted-foreground text-sm">
-                Skilled professionals with years of experience in premium grooming
+                {t('features.expert.desc')}
               </p>
             </div>
           </div>

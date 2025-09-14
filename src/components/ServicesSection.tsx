@@ -16,48 +16,48 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onBookingClick }) => 
       nameKey: 'services.haircut',
       price: 6000,
       duration: '45 min',
-      description: 'Professional styling with modern techniques and premium tools',
-      features: ['Consultation', 'Wash & Cut', 'Styling', 'Premium Products']
+      description: t('services.haircut.desc'),
+      features: [t('feature.consultation'), t('feature.wash_cut'), t('feature.styling'), t('feature.premium_products')]
     },
     {
       icon: Crown,
       nameKey: 'services.royal_shave',
       price: 6000,
       duration: '60 min',
-      description: 'Traditional hot towel shave with luxury treatment',
-      features: ['Hot Towel', 'Premium Shave', 'Face Massage', 'Aftercare']
+      description: t('services.royal_shave.desc'),
+      features: [t('feature.hot_towel'), t('feature.premium_shave'), t('feature.face_massage'), t('feature.aftercare')]
     },
     {
       icon: Brush,
       nameKey: 'services.beard_styling',
       price: 5000,
       duration: '30 min',
-      description: 'Expert beard trimming and shaping for the perfect look',
-      features: ['Trimming', 'Shaping', 'Oil Treatment', 'Styling']
+      description: t('services.beard_styling.desc'),
+      features: [t('feature.trimming'), t('feature.shaping'), t('feature.oil_treatment'), t('feature.styling')]
     },
     {
       icon: Sparkles,
       nameKey: 'services.waxing',
       price: 4000,
       duration: '20 min',
-      description: 'Professional waxing services for clean, smooth finish',
-      features: ['Nose/Ear Wax', 'Eyebrow Trim', 'Clean Finish', 'Comfort Care']
+      description: t('services.waxing.desc'),
+      features: [t('feature.nose_ear_wax'), t('feature.eyebrow_trim'), t('feature.clean_finish'), t('feature.comfort_care')]
     },
     {
       icon: Waves,
       nameKey: 'services.spa',
       price: 3000,
       duration: '40 min',
-      description: 'Relaxing spa treatments for ultimate grooming experience',
-      features: ['Face Mask', 'Scalp Massage', 'Relaxation', 'Premium Care']
+      description: t('services.spa.desc'),
+      features: [t('feature.face_mask'), t('feature.scalp_massage'), t('feature.relaxation'), t('feature.premium_care')]
     },
     {
       icon: Palette,
       nameKey: 'services.toning',
       price: 3000,
       duration: '35 min',
-      description: 'Professional hair toning and color enhancement',
-      features: ['Color Analysis', 'Toning', 'Conditioning', 'Styling']
+      description: t('services.toning.desc'),
+      features: [t('feature.color_analysis'), t('feature.toning'), t('feature.conditioning'), t('feature.styling')]
     }
   ];
 
@@ -70,8 +70,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onBookingClick }) => 
             {t('services.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Experience premium grooming services with our skilled barbers using traditional techniques
-            and modern equipment for the perfect gentleman's experience.
+            {t('services.description')}
           </p>
         </div>
 
@@ -138,11 +137,10 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onBookingClick }) => 
         <div className="text-center">
           <div className="card-gradient rounded-2xl p-8 md:p-12 border border-border/50 max-w-4xl mx-auto">
             <h3 className="text-3xl font-serif font-bold text-gradient mb-4">
-              Ready for the Premium Experience?
+              {t('services.cta.title')}
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Book your appointment today and experience the finest barbershop services in Armenia.
-              Our expert barbers are ready to give you the perfect look.
+              {t('services.cta.desc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -158,7 +156,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onBookingClick }) => 
                 size="xl"
                 onClick={() => window.open('tel:+37498157773', '_self')}
               >
-                Call: +374 98 157 773
+                {t('call')}: +374 98 157 773
               </Button>
             </div>
           </div>

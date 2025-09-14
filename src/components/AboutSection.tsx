@@ -47,7 +47,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onBookingClick }) => {
             {t('about.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Welcome to Armenia's first barbershop academy and premium grooming destination
+            {t('about.header_subtitle')}
           </p>
         </div>
 
@@ -57,31 +57,28 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onBookingClick }) => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-3xl font-serif font-semibold text-foreground">
-                Первая барберская академия Армении «ABACH»
+                {t('about.hero_title')}
               </h3>
               
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  {t('about.description')} Готовы обладать тем мастерством, которое было и будет актуальным всегда? 
-                  Приходите к нам - мы обучим.
+                  {t('about.description')} {t('about.p1')}
                 </p>
                 
                 <p>
-                  Впервые в Армении открылась школа барберов. Нам много чего есть Вам рассказать. 
-                  На протяжении 4-х лет мы набрались огромного опыта, которым готовы с Вами поделиться.
+                  {t('about.p2')}
                 </p>
                 
                 <p>
-                  Все навыки мы используем в практике и на моделях. После окончания обучения мы 
-                  обустраиваем выпускников на работу в Армении и в России.
+                  {t('about.p3')}
                 </p>
               </div>
 
               <div className="card-gradient rounded-xl p-6 border border-border/50">
-                <h4 className="font-semibold text-foreground mb-2">Karo Abachyan</h4>
-                <p className="text-muted-foreground">Founder & Master Barber</p>
+                <h4 className="font-semibold text-foreground mb-2">{t('about.karo_name')}</h4>
+                <p className="text-muted-foreground">{t('about.karo_title')}</p>
                 <p className="text-sm text-muted-foreground mt-2">
-                  "We're waiting for you. Don't miss the opportunity - hurry up!"
+                  {t('about.karo_quote')}
                 </p>
               </div>
             </div>
@@ -123,11 +120,11 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onBookingClick }) => {
                   </div>
                   
                   <div className="font-semibold text-foreground mb-2">
-                    {achievement.label}
+                    {t(`about.ach.${achievement.label.toLowerCase()}.label`)}
                   </div>
                   
                   <p className="text-sm text-muted-foreground">
-                    {achievement.description}
+                    {t(`about.ach.${achievement.label.toLowerCase()}.desc`)}
                   </p>
                 </div>
               );
@@ -139,24 +136,23 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onBookingClick }) => {
         <div className="mt-16">
           <div className="card-gradient rounded-2xl p-8 md:p-12 border border-border/50 text-center">
             <h3 className="text-3xl font-serif font-bold text-gradient mb-6">
-              Join Our Barbershop Academy
+              {t('about.academy.title')}
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Learn from the best and become a skilled professional barber. Our comprehensive training 
-              program covers traditional techniques and modern styling methods.
+              {t('about.academy.desc')}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-2">Professional Training</div>
-                <p className="text-sm text-muted-foreground">Comprehensive barbering education</p>
+                <div className="text-2xl font-bold text-primary mb-2">{t('about.academy.f1.title')}</div>
+                <p className="text-sm text-muted-foreground">{t('about.academy.f1.desc')}</p>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-2">Job Placement</div>
-                <p className="text-sm text-muted-foreground">Employment in Armenia and Russia</p>
+                <div className="text-2xl font-bold text-primary mb-2">{t('about.academy.f2.title')}</div>
+                <p className="text-sm text-muted-foreground">{t('about.academy.f2.desc')}</p>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary mb-2">Hands-on Practice</div>
-                <p className="text-sm text-muted-foreground">Real experience with models</p>
+                <div className="text-2xl font-bold text-primary mb-2">{t('about.academy.f3.title')}</div>
+                <p className="text-sm text-muted-foreground">{t('about.academy.f3.desc')}</p>
               </div>
             </div>
             <Button 
@@ -164,7 +160,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ onBookingClick }) => {
               size="lg"
               onClick={() => window.open('tel:+37498157773', '_self')}
             >
-              Learn About Academy
+              {t('about.academy.cta')}
             </Button>
           </div>
         </div>
