@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { MapPin, Clock, Shield, Award } from 'lucide-react';
-import mobileImage from '@/assets/mobile-barbershop.jpg';
+import { mobileImageUrl } from '@/lib/imageSources';
 
 interface MobileBarberSectionProps {
   onBookingClick: () => void;
@@ -10,6 +10,23 @@ interface MobileBarberSectionProps {
 
 const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClick }) => {
   const { t } = useLanguage();
+  const [dynamicUrl, setDynamicUrl] = useState<string>(mobileImageUrl);
+
+  useEffect(() => {
+    let isMounted = true;
+    fetch('/instagram.json')
+      .then((r) => r.ok ? r.json() : null)
+      .then((json) => {
+        const url = json?.images?.[1];
+        if (isMounted && typeof url === 'string' && url.length > 0) {
+          setDynamicUrl(url);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <section className="py-20 bg-gradient-to-r from-background via-muted/10 to-background">
@@ -104,7 +121,7 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl elegant-shadow group">
               <img 
-                src={mobileImage} 
+                src={dynamicUrl} 
                 alt="ABACH Mobile Barbershop Van"
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
               />

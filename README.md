@@ -41,3 +41,16 @@ npm run preview
 
 - Booking modal embeds Altegio via an iframe. Height adapts to viewport.
 - No Lovable-specific tooling is used; all Lovable references and the `lovable-tagger` dev plugin have been removed.
+
+### Custom Images (from Instagram or elsewhere)
+
+You can replace built-in hero/mobile images by setting environment variables with direct image URLs (e.g., from Instagram CDN or any host):
+
+Create a `.env.local` in project root:
+
+```env
+VITE_HERO_IMAGE_URL=https://example.com/path/to/hero.jpg
+VITE_MOBILE_IMAGE_URL=https://example.com/path/to/mobile.jpg
+```
+
+Restart the dev server after changing `.env.local`.

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ChevronRight, Star } from 'lucide-react';
-import heroImage from '@/assets/hero-barbershop.jpg';
+import { heroImageUrl } from '@/lib/imageSources';
 
 interface HeroSectionProps {
   onBookingClick: () => void;
@@ -10,13 +10,30 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ onBookingClick }) => {
   const { t } = useLanguage();
+  const [dynamicUrl, setDynamicUrl] = useState<string>(heroImageUrl);
+
+  useEffect(() => {
+    let isMounted = true;
+    fetch('/instagram.json')
+      .then((r) => r.ok ? r.json() : null)
+      .then((json) => {
+        const url = json?.images?.[0];
+        if (isMounted && typeof url === 'string' && url.length > 0) {
+          setDynamicUrl(url);
+        }
+      })
+      .catch(() => {});
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
-          src={heroImage} 
+          src={dynamicUrl} 
           alt="Premium barbershop interior"
           className="w-full h-full object-cover"
         />
