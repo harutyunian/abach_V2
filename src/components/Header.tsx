@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ onBookingClick }) => {
           <div className="flex items-center space-x-2">
             <h1 className="text-2xl font-serif font-bold text-gradient">ABACH</h1>
             <div className="hidden sm:block text-xs text-muted-foreground">
-              {t('hero.description')}
+              {t('header.slogan')}
             </div>
           </div>
 

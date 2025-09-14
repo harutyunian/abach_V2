@@ -18,6 +18,8 @@ const translations = {
     'nav.about': 'Մեր մասին',
     'nav.contact': 'Կապ',
     'nav.booking': 'Ամրագրում',
+    // Header Slogan
+    'header.slogan': 'Ճիշտ այն, ինչ պետք է ձեզ',
     
     // Hero Section
     'hero.title': 'ABACH',
@@ -144,6 +146,8 @@ const translations = {
     'nav.about': 'О нас',
     'nav.contact': 'Контакты',
     'nav.booking': 'Запись',
+    // Header Slogan
+    'header.slogan': 'Именно то, что вам нужно',
     
     // Hero Section
     'hero.title': 'ABACH',
@@ -266,6 +270,8 @@ const translations = {
     'nav.about': 'About',
     'nav.contact': 'Contact',
     'nav.booking': 'Booking',
+    // Header Slogan
+    'header.slogan': 'Exactly what you need',
     
     // Hero Section
     'hero.title': 'ABACH',
