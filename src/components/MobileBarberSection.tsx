@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { MapPin, Clock, Shield, Award } from 'lucide-react';
 import { mobileImageUrl } from '@/lib/imageSources';
 
 interface MobileBarberSectionProps {
@@ -44,53 +43,9 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
                 {t('mobile.description')}
               </p>
               
-              <p className="text-lg text-foreground font-medium">
-                {t('mobile.quality_statement')}
-              </p>
+              {/* removed extra quality statement per user request */}
             </div>
 
-            {/* Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-primary rounded-full">
-                  <MapPin className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t('mobile.feature1.title')}</h3>
-                  <p className="text-sm text-muted-foreground">{t('mobile.feature1.desc')}</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-primary rounded-full">
-                  <Clock className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t('mobile.feature2.title')}</h3>
-                  <p className="text-sm text-muted-foreground">{t('mobile.feature2.desc')}</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-primary rounded-full">
-                  <Shield className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t('mobile.feature3.title')}</h3>
-                  <p className="text-sm text-muted-foreground">{t('mobile.feature3.desc')}</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-primary rounded-full">
-                  <Award className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">{t('mobile.feature4.title')}</h3>
-                  <p className="text-sm text-muted-foreground">{t('mobile.feature4.desc')}</p>
-                </div>
-              </div>
-            </div>
 
             {/* Contact Info */}
             <div className="card-gradient rounded-xl p-6 border border-border/50">

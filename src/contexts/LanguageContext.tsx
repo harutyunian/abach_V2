@@ -80,8 +80,8 @@ const translations = {
     
     // Mobile Barbershop
     'mobile.title': 'Միակ շարժական վաբերությունը',
-    'mobile.description': 'Հայաստանի առաջին շարժական վաբերշոփը՝ պրոֆեսիոնալ խնամք ձեր վայրում։ Ժամանակակից մոտեցում՝ ավանդական արվեստին։',
-    'mobile.phone': '+374 98 157 773',
+    'mobile.description': 'Հայաստանում առաջին շարժական բարբերշոփը՝ #karoabachyanbarbershop-ն, արդեն առաջարկում է վարսավիրանոց՝ կանչով։ Ներկայացնում է վարսավիրական ծառայությունների մատուցում, հիմնված ժամանակակից մոտեցումների վրա, որի հիմքում դրված է զբաղված հաճախորդին ապահովել անհրաժեշտ և նախընտրած ծառայությունը։\n\nՑանկացողները օգտվել մեր ծառայությունից, կարող են զանգահարել +(374)98157773, +(374)43157773, և մեքենան կմոտենա ձեր ցանկացած տարածք։\n\nԱրհեստավարժ մասնագետների կողմից ապահովում ենք բարձր որակ և առավելագույն հարմարավետություն հաճախորդների համար։\n\n#karoabachyanbarbershop-ում չկան չիրականացվող ծառայություններ։',
+    'mobile.phone': '+374 98 157 773, +374 43 157 773',
     'mobile.quality_statement': 'Բարձր մասնագիտական որակ և առավելագույն հարմարավետություն հաճախորդների համար։',
     'mobile.feature1.title': 'Գալիս ենք ձեր մոտ',
     'mobile.feature1.desc': 'Մասնագիտական ծառայություններ՝ ձեր վայրում',
@@ -204,8 +204,8 @@ const translations = {
     
     // Mobile Barbershop
     'mobile.title': 'Единственный барбершоп у дома',
-    'mobile.description': 'Первый в Армении мобильный барбершоп предлагает барбера на выезд. Предоставление парикмахерских услуг, основанных на современных подходах.',
-    'mobile.phone': '+374 98 157 773',
+    'mobile.description': 'Первый в Армении мобильный барбершоп #karoabachyanbarbershop уже предлагает барбершоп на выезд. Предоставление парикмахерских услуг, основанных на современных подходах, в основе которого — обеспечение необходимого и желаемого обслуживания занятого гражданина.\n\nЖелающие воспользоваться нашими услугами могут позвонить по номерам +37498157773, +37443157773 и машина приедет в желаемое вами место.\n\nОбеспечение высокого профессионального качества обслуживания и максимального удобства для клиентов.\n\nВ #karoabachyanbarbershop нет запретов на предоставление услуг.',
+    'mobile.phone': '+374 98 157 773, +374 43 157 773',
     'mobile.quality_statement': 'Высокое профессиональное качество обслуживания и максимальное удобство.',
     'mobile.feature1.title': 'Мы приедем к вам',
     'mobile.feature1.desc': 'Профессиональные услуги на вашей локации',
@@ -328,8 +328,8 @@ const translations = {
     
     // Mobile Barbershop
     'mobile.title': 'The Only Mobile Barbershop',
-    'mobile.description': "Armenia's first mobile barbershop offers professional grooming services at your location. Modern approach to traditional barbering.",
-    'mobile.phone': '+374 98 157 773',
+    'mobile.description': 'The first mobile barbershop in Armenia, #karoabachyanbarbershop, already offers a barbershop on the go. We provide hairdressing services based on modern approaches, focused on delivering the necessary and desired services for busy clients.\n\nThose wishing to use our services can call +37498157773, +37443157773 and the car will arrive at your desired location.\n\nWe provide high professional quality of service and maximum convenience for clients.\n\nAt #karoabachyanbarbershop there are no restrictions on the services provided.',
+    'mobile.phone': '+374 98 157 773, +374 43 157 773',
     'mobile.quality_statement': 'Delivering high professional quality and maximum convenience.',
     'mobile.feature1.title': 'We Come to You',
     'mobile.feature1.desc': 'Professional services at your location',
