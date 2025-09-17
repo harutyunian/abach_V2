@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ChevronRight, Star } from 'lucide-react';
-import { heroImageUrl } from '@/lib/imageSources';
 
 interface HeroSectionProps {
   onBookingClick: () => void;
@@ -10,32 +9,18 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ onBookingClick }) => {
   const { t } = useLanguage();
-  const [dynamicUrl, setDynamicUrl] = useState<string>(heroImageUrl);
-
-  useEffect(() => {
-    let isMounted = true;
-    fetch('/instagram.json')
-      .then((r) => r.ok ? r.json() : null)
-      .then((json) => {
-        const url = json?.images?.[0];
-        if (isMounted && typeof url === 'string' && url.length > 0) {
-          setDynamicUrl(url);
-        }
-      })
-      .catch(() => {});
-    return () => {
-      isMounted = false;
-    };
-  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background video */}
       <div className="absolute inset-0">
-        <img 
-          src={dynamicUrl} 
-          alt="Premium barbershop interior"
+        <video
           className="w-full h-full object-cover"
+          src="https://video.wixstatic.com/video/c31dbd_f5431f587a5042e0a6d3c7a8c08133a5/480p/mp4/file.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
@@ -95,6 +80,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onBookingClick }) => {
               {t('learn_more')}
             </Button>
           </div>
+
+          {/* Media blocks removed per request */}
 
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

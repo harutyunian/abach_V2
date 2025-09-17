@@ -29,12 +29,23 @@ async function main() {
 
   // Extract image URLs from the page (both generic and JSON-embedded)
   const genericImgRegex = /https?:\/\/[^"'\s]+\.(?:jpg|jpeg|png|webp)/gi;
-  const displayUrlRegex = /\"display_url\"\s*:\s*\"(https?:\\\\\/\\\\\/[^\"]+\.(?:jpg|jpeg|png|webp))/g;
+  const displayUrlRegex = /\"display_url\"\s*:\s*\"(https?:\\\\\/\\\\\/[^"]+\.(?:jpg|jpeg|png|webp))/g;
+  const ogImageRegex = /<meta[^>]+property=['"]og:image['"][^>]+content=['"]([^'"]+)['"][^>]*>/gi;
+  const ogImageSecureRegex = /<meta[^>]+property=['"]og:image:secure_url['"][^>]+content=['"]([^'"]+)['"][^>]*>/gi;
+  const twitterImageRegex = /<meta[^>]+name=['"]twitter:image['"][^>]+content=['"]([^'"]+)['"][^>]*>/gi;
+  const profilePicRegex = /\"profile_pic_url_hd\"\s*:\s*\"(https?:\\\\\/\\\\\/[^"]+\.(?:jpg|jpeg|png|webp))/g;
+
   const matchesA = text.match(genericImgRegex) || [];
   const matchesB = Array.from(text.matchAll(displayUrlRegex)).map((m) =>
     m[1].replace(/\\\\\\\//g, '/').replace(/\\\\\//g, '/').replace(/\\\\/g, '')
   );
-  const matches = [...matchesA, ...matchesB];
+  const ogA = Array.from(text.matchAll(ogImageRegex)).map((m) => m[1]);
+  const ogB = Array.from(text.matchAll(ogImageSecureRegex)).map((m) => m[1]);
+  const twA = Array.from(text.matchAll(twitterImageRegex)).map((m) => m[1]);
+  const prof = Array.from(text.matchAll(profilePicRegex)).map((m) =>
+    m[1].replace(/\\\\\\\//g, '/').replace(/\\\\\//g, '/').replace(/\\\\/g, '')
+  );
+  const matches = [...matchesA, ...matchesB, ...ogA, ...ogB, ...twA, ...prof];
   // Remove query params and dedupe
   const images = Array.from(
     new Set(

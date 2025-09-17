@@ -9,7 +9,9 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "fetch:instagram": "node ./scripts/fetch-instagram.mjs"
+    "fetch:instagram": "node ./scripts/fetch-instagram.mjs",
+    "fetch:abach": "node ./scripts/fetch-abach.mjs",
+    "fetch:social": "npm run fetch:abach && npm run fetch:instagram"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
