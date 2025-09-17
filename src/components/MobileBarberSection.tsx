@@ -13,7 +13,7 @@ const MobileBarberSection: React.FC<MobileBarberSectionProps> = ({ onBookingClic
 
   useEffect(() => {
     let isMounted = true;
-    fetch('/instagram.json')
+    fetch('./instagram.json')
       .then((r) => r.ok ? r.json() : null)
       .then((json) => {
         const url = json?.images?.[1];
